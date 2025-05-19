@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fridge Products</title>
+</head>
+<body>
+<h2>Fridge Products</h2>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Date Stored</th>
+        <th>Best Before</th>
+        <th>Quantity</th>
+        <th>User Id</th>
+        <th>Email</th>
+        <th>First Name</th>
+    </tr>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.productName}">Product Name</td>
+        <td th:text="${product.category}">Category</td>
+        <td th:text="${product.dateStored}">Date Stored</td>
+        <td th:text="${product.bestBeforeDate}">Best Before</td>
+        <td th:text="${product.quantity}">Quantity</td>
+
+        <td th:text="${product.userId}">User Id</td>
+        <td th:text="${product.email}">Email</td>
+        <td th:text="${product.firstName}">First Name</td>
+    </tr>
+</table>
+</body>
+</html>
