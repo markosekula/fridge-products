@@ -1,0 +1,129 @@
+type: collection.insomnia.rest/5.0
+name: goods-fridge
+meta:
+  id: wrk_f2f37f8eff16493cb398be273fa029e6
+  created: 1746798445917
+  modified: 1746798445917
+collection:
+  - url: http://localhost:1992/fridge/api/v1/createUser
+    name: Add new user
+    meta:
+      id: req_bbb0bd52285546ee8faa163732833afc
+      created: 1746798452727
+      modified: 1746802480369
+      isPrivate: false
+      sortKey: -1746798452727
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {	
+        	"firstName": "Jack",
+        	"email": "jack3@gmail.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:1992/fridge/api/v1/createAndUpdateProduct
+    name: Add and update product
+    meta:
+      id: req_2de0c7d8ea584dcaa315544faa8c8518
+      created: 1746799872319
+      modified: 1747644557004
+      isPrivate: false
+      sortKey: -1746799872319
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {	
+        	"productName": "banana",
+        	"category": "fruit",
+        	"bestBeforeDate": "2025-05-20T00:00:00",
+        	"quantity": 5,
+        	"userId": 2
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:1992/fridge/api/v1/timeStored/2
+    name: Time Stored Products by UserId
+    meta:
+      id: req_2f88406038eb448eb6acf9a56e2c3e9f
+      created: 1746809317150
+      modified: 1746899796542
+      isPrivate: false
+      sortKey: -1746809317150
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:1992/fridge/api/v1/expiring-soon/2?days=1
+    name: Expiring Soon Products by UserId
+    meta:
+      id: req_a832071273d94468a3f2b91f7af65993
+      created: 1746898471957
+      modified: 1747644604924
+      isPrivate: false
+      sortKey: -1746804594734.5
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0d2f8c1e356f4dae32aa7b30418bc42a3c482da9
+    created: 1746798445929
+    modified: 1746798445929
+environments:
+  name: Base Environment
+  meta:
+    id: env_0d2f8c1e356f4dae32aa7b30418bc42a3c482da9
+    created: 1746798445924
+    modified: 1746798445924
+    isPrivate: false
