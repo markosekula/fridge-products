@@ -7,7 +7,7 @@ Insomnia collection with all APIs has been added in the 'insomnia-collection' di
 1. POST - http://localhost:1992/fridge/api/v1/createUser
 2. POST - http://localhost:1992/fridge/api/v1/createAndUpdateProduct
 3. GET - http://localhost:1992/fridge/api/v1/expiring-soon/userId?days=1
-4. http://localhost:1992/fridge/api/v1/timeStored/userId
+4. GET - http://localhost:1992/fridge/api/v1/timeStored/userId
 
 <h4> One simple API, just to see data via simple HTML: </h4>
 http://localhost:1992/fridge/view/timeStored
